@@ -28,7 +28,8 @@ The solution must include the following steps:
 
 5)Creating a streamlit page where you can insert each column value and you will get the Selling_Price predicted value or Status(Won/Lost)
 
-Approach: 
+Approach:
+
 Data Understanding: 
 Identify the types of variables (continuous, categorical) and their distributions. Some rubbish values are present in ‘Material_Reference’ which starts with ‘00000’ value which should be converted into null. Treat reference columns as categorical variables. INDEX may not be useful.
 
@@ -54,7 +55,9 @@ Same steps for Regression modelling.(note: dataset contains more noise and linea
 Model GUI: Using streamlit module, create interactive page with
 
    (1) task input( Regression or Classification) and 
-   (2) create an input field where you can enter each column value except ‘Selling_Price’ for regression model and  except ‘Status’ for classification model. 
+   
+   (2) create an input field where you can enter each column value except ‘Selling_Price’ for regression model and  except ‘Status’ for classification model.
+   
    (3) perform the same feature engineering, scaling factors, log/any transformation steps which you used for training ml model and predict this new data from streamlit and display the output.
    
 Tips: Use pickle module to dump and load models such as encoder(onehot/ label/ str.cat.codes /etc), scaling models(standard scaler), ML models. First fit and then transform in separate line and use transform only for unseen data 
